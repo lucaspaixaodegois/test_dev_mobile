@@ -17,19 +17,25 @@ class _APIState extends State<API> {
     const url =
         "https://raw.githubusercontent.com/App2Sales/mobile-challenge/master/content.json";
 
+    //criando um requisição http
     http.Response response = await http.get(Uri.parse(url));
 
-    Map<String, dynamic> retorno = json.decode(response.body);
-    setState(() {
-      _links = retorno["video"]["audio"]["pdf"].toString();
-    });
+    //verificando statusCode
+    if (response.statusCode == 200) {
+      print("Sucesso");
 
-    print("Resultado : " + retorno["video"]["audio"]["pdf"].toString());
-  }
+      //dicionario dos dados
+      Map<String, dynamic> retorno = json.decode(response.body);
+      setState(() {
+        _links = retorno["video"]["audio"]["pdf"].toString();
+      });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container();
+      print("Resultado : " + retorno["video"]["audio"]["pdf"].toString());
+    }
+
+    @override
+    Widget build(BuildContext context) {
+      return Container();
+    }
   }
-}
 */
