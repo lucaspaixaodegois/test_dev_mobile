@@ -1,6 +1,7 @@
 //inportando libs
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:test_dev_mobile/Pdf.dart';
 import 'dart:convert';
 
 import 'Audio.dart';
@@ -62,10 +63,7 @@ class _HomeState extends State<Home> {
       style: opcStyle,
     ),
     Audio(),
-    Text(
-      ' Lendo PDF',
-      style: opcStyle,
-    ),
+    Pdf(),
   ];
 
 //função que seta o index do menuBar
@@ -73,7 +71,7 @@ class _HomeState extends State<Home> {
     setState(() {
       _indexMenuBar = index; // atualiza valor do indexAtual
       _buscarLinks(); //chama a função buscarLinks
-      
+
       //Api();
     });
   }
