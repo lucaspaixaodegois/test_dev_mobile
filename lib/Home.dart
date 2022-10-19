@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
       String pdf = retorno["pdf"];
 
       setState(() {
-        _links = "\n| Vídeo: $video | \nÁudio: $audio | \nPDF: $pdf |";
+        _links = "\nVídeo: $video\nÁudio: $audio\nPDF: $pdf ";
       });
 
       print(_links);//mostrar no console links
