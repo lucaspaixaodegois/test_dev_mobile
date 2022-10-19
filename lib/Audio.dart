@@ -36,7 +36,7 @@ class _AudioState extends State<Audio> {
   @override
   Widget build(BuildContext context) {
     //chama a funcao executar, logo assim que rodar o app já começa tocando o audio
-    _executar();
+    // _executar();
 
     //função parar, ou seja executa o stop, logo quando clicar em play o audio irá tocar do começo
     _parar() async {
@@ -65,6 +65,7 @@ class _AudioState extends State<Audio> {
                 MainAxisAlignment.center, //centralizando detro da linha
             children: <Widget>[
               //definido espacamentos em todos os lados
+
               Padding(
                 padding: const EdgeInsets.all(8),
 
