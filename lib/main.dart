@@ -1,8 +1,12 @@
 //importando libs
 import 'package:flutter/material.dart';
-import 'Home.dart';
-//declarando main
+import 'package:test_dev_mobile/data/Api.dart';
+import 'screens/Home.dart';
+
 void main() => runApp(const MaterialApp(
-      home: Home(),//chamando class Home
-      debugShowCheckedModeBanner: false,//desabilitando bannerDebug
-    ));
+      home: Home(),
+      debugShowCheckedModeBanner: false,
+    ),
+   
+    ); 
+    
