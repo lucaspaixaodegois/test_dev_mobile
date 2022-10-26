@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:test_dev_mobile/data/Api.dart';
 import 'Home.dart';
@@ -44,24 +42,28 @@ class _MenuState extends State<Menu> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
+            backgroundColor: Color.fromARGB(255, 235, 134, 2),
             icon: Icon(Icons.home),
             label: 'home',
           ),
           BottomNavigationBarItem(
+            backgroundColor: Color.fromARGB(255, 235, 134, 2),
             icon: Icon(Icons.movie),
             label: 'Vídeo',
           ),
           BottomNavigationBarItem(
+            backgroundColor: Color.fromARGB(255, 235, 134, 2),
             icon: Icon(Icons.audio_file),
             label: 'Áudio',
           ),
           BottomNavigationBarItem(
+            backgroundColor: Color.fromARGB(255, 235, 134, 2),
             icon: Icon(Icons.picture_as_pdf),
             label: 'Ebook',
           ),
         ],
         currentIndex: _indexMenuBar,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.black,
         onTap: _menuBarTouch,
       ),
     );
