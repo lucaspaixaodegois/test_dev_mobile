@@ -1,14 +1,18 @@
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
-class Api {
+
+abstract class Api extends StatelessWidget{
   String linkVideo = "";
   String linkAudio = "";
   String linkPdf = "";
 
+  Api({super.key,  required this.linkAudio,  required this.linkPdf,  required this.linkVideo});
+
   Future buscarLinks() async {
-    print("apiTESte");
+    print("apiTeste");
     const url =
         "https://raw.githubusercontent.com/App2Sales/mobile-challenge/master/content.json";
 
@@ -29,10 +33,8 @@ class Api {
       print("${res["video"]["audio"]["pdf"]}");
     }
   }
+  
+  
 
-  getLink() {
-    return linkAudio;
-  }
-
-  Future<String> get audioTest async => linkAudio;
+ 
 }
